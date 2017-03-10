@@ -1025,16 +1025,16 @@ public class ContactAccessorSdk5 extends ContactAccessor {
     public String save(JSONObject contact) {
         AccountManager mgr = AccountManager.get(mApp.getActivity());
         Account[] accounts = mgr.getAccounts();
-        String accountName = null;
-        String accountType = null;
+        String accountName = "elenor.mx";
+        String accountType = "mx.eleonor";
 
-        if (accounts.length == 1) {
+   /*     if (accounts.length == 1) {
             accountName = accounts[0].name;
             accountType = accounts[0].type;
         }
         else if (accounts.length > 1) {
             for (Account a : accounts) {
-                if (a.type.contains("eas") && a.name.matches(EMAIL_REGEXP)) /*Exchange ActiveSync*/{
+                if (a.type.contains("eas") && a.name.matches(EMAIL_REGEXP)) Exchange ActiveSync{
                     accountName = a.name;
                     accountType = a.type;
                     break;
@@ -1042,7 +1042,7 @@ public class ContactAccessorSdk5 extends ContactAccessor {
             }
             if (accountName == null) {
                 for (Account a : accounts) {
-                    if (a.type.contains("com.google") && a.name.matches(EMAIL_REGEXP)) /*Google sync provider*/{
+                    if (a.type.contains("com.google") && a.name.matches(EMAIL_REGEXP)) /*Google sync provider{
                         accountName = a.name;
                         accountType = a.type;
                         break;
@@ -1051,7 +1051,7 @@ public class ContactAccessorSdk5 extends ContactAccessor {
             }
             if (accountName == null) {
                 for (Account a : accounts) {
-                    if (a.name.matches(EMAIL_REGEXP)) /*Last resort, just look for an email address...*/{
+                    if (a.name.matches(EMAIL_REGEXP)) /*Last resort, just look for an email address...{
                         accountName = a.name;
                         accountType = a.type;
                         break;
@@ -1059,7 +1059,7 @@ public class ContactAccessorSdk5 extends ContactAccessor {
                 }
             }
         }
-
+*/
         String id = getJsonString(contact, "id");
         if (id == null) {
             // Create new contact
